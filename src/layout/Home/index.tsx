@@ -7,6 +7,7 @@ import { LoaderCircle, Search } from "lucide-react";
 import { filterFoodsByName } from "@/utils/filter-string";
 import { Pagination } from "@/components/Pagination";
 import { useSearchParams } from 'next/navigation'
+import { Navbar } from "@/components/Navbar";
 
 type HomeLayoutProps = {
   foods: Food[]
@@ -45,10 +46,15 @@ export default function HomeLayout({ foods }: HomeLayoutProps) {
         <div className="flex flex-row justify-between align-bottom flex-wrap">
 
           <div className="flex flex-col w-full">
+            <div className="flex flex-row items-center mb-2 justify-between" >
+              <h1 className="text-zinc-200 text-2xl font-bold">
+                TABELA TACO
+              </h1>
+              <div>
+                <Navbar />
+              </div>
+            </div>
 
-            <h1 className="text-zinc-200 text-2xl font-bold mb-2">
-              TABELA TACO
-            </h1>
             <div className="flex flex-row items-center gap-2">
               <div className="bg-zinc-800 items-center justify-center flex w-9 h-9 rounded">
                 {loadingFilter ? (
