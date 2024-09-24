@@ -9,12 +9,12 @@ export function TableData({ name, unit, value }: TableDataProps) {
     <div className="flex flex-col bg-zinc-300  rounded py-1 px-2">
 
       <p className="text-xs text-zinc-600 font-bold">
-        {name}
+        {name}{unit && `(${unit})`}
       </p>
 
       <p className="text-zinc-900">
         {value ?
-          `${typeof (value) === 'number' ? `${value.toFixed(2)} ${unit}` : value}`
+          `${typeof (value) === 'number' ? `${value.toFixed(2)}` : value}`
           : (
             '-'
           )}

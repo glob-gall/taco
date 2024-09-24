@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,22 +21,27 @@ function NavItem({ href, text, active }: NavItemProps) {
   )
 }
 
-export function Navbar() {
+type NavbarItem = {
+  text: string
+  path: string
+}
+type NavbarProps = {
+  items: NavbarItem[]
+}
+export function Navbar({ items }: NavbarProps) {
   const pathname = usePathname();
   console.log({ pathname });
 
   return (
     <div className="flex gap-2">
-      <NavItem
-        href="/"
-        text="Home"
-        active={pathname === '/'}
-      />
-      <NavItem
-        href="/table"
-        text="Tabela"
-        active={pathname === '/table'}
-      />
+      {items.map(i => (
+        <NavItem
+          key={i.path}
+          href={i.path}
+          text={i.text}
+          active={pathname === i.path}
+        />
+      ))}
     </div>
   )
 }

@@ -2,6 +2,8 @@ import { useMemo } from "react";
 import Taco from '@/../taco.json'
 import { Food } from "@/entity/food";
 import { PageContainer } from "@/components/PageContainer";
+import { Header } from "@/components/Header";
+import { DetailsLayout } from "@/layout/Details";
 
 export async function getStaticPaths() {
   const paths = Taco.taco.map(f => ({ params: { id: `${f.id}` } }))
@@ -27,10 +29,6 @@ export default function FoodPage({ params }: StaticProps) {
     )
   }
   return (
-    <PageContainer>
-      <p className="text-zinc-200">
-        teste: {food.name}
-      </p>
-    </PageContainer>
+    <DetailsLayout food={food} />
   )
 }

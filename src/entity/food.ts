@@ -1,5 +1,5 @@
 
-type FoodValue = number | string | null
+export type FoodValue = number | string | null
 
 export type Food = {
   id: number;
