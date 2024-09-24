@@ -1,0 +1,32 @@
+
+
+
+Umidade	(%)
+
+Energia	(kcal)
+
+Proteína	(g)
+Carboidrato	(g)
+Lipídeos	(g)
+Fibras	(g)
+Cinzas	(g)
+
+Colesterol	(mg)
+Cálcio	(mg)
+Magnésio	(mg)
+Manganês	(mg)
+Fósforo	(mg)
+Ferro	(mg)
+Sódio	(mg)
+Potássio	(mg)
+Cobre	(mg)
+Zinco	(mg)
+Tiamina	(mg)
+Riboflavina	(mg)
+Piridoxina	(mg)
+Niacina	(mg)
+C	(mg)
+
+Retinol	(mcg)
+RE	(mcg)
+RAE	(mcg)
